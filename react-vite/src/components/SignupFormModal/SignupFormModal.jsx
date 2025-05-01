@@ -40,9 +40,9 @@ function SignupFormModal() {
 
   return (
     <>
-      <h1>Sign Up</h1>
       {errors.server && <p>{errors.server}</p>}
       <form onSubmit={handleSubmit}>
+      <h1>Sign Up</h1>
         <label>
           Email
           <input

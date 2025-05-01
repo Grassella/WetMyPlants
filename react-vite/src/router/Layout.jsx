@@ -13,6 +13,7 @@ export default function Layout() {
   }, [dispatch]);
 
   return (
+    
     <>
       <ModalProvider>
         <Navigation />
