@@ -1,25 +1,49 @@
-FROM python:3.9.18-alpine3.18
+# FRONTEND BUILD
+FROM --platform=amd64 node:18 AS frontend
 
-RUN apk add build-base
+WORKDIR /frontend
 
-RUN apk add postgresql-dev gcc python3-dev musl-dev
+COPY ./frontend/package.json .
 
-ARG FLASK_APP
-ARG FLASK_ENV
-ARG DATABASE_URL
-ARG SCHEMA
-ARG SECRET_KEY
-ARG PERENUAL_API_KEY
+RUN npm install
+
+COPY ./frontend .
+
+RUN npm run build
+
+
+# BACKEND BUILD - production website
+FROM --platform=amd64 python:3.9
 
 WORKDIR /var/www
 
-COPY requirements.txt .
+ENV FLASK_APP=app
 
-RUN pip install -r requirements.txt
-RUN pip install psycopg2
+ENV SQLALCHEMY_ECHO=True
 
-COPY . .
+ARG FLASK_ENV=production
+ENV FLASK_ENV=${FLASK_ENV}
 
-RUN flask db upgrade
-RUN flask seed all
-CMD gunicorn app:app
+ARG SCHEMA=graciela_cap
+ENV SCHEMA=${SCHEMA}
+
+ARG DATABASE_URL=postgresql://anthony_database_vp6k_user:JWTKUXbikxR0iaRoLJNfDnnnGUda49Rl@dpg-d0v7ng63jp1c73dsaigg-a.ohio-postgres.render.com/anthony_database_vp6k
+ENV DATABASE_URL=${DATABASE_URL}
+
+ARG SECRET_KEY=banana
+ENV SECRET_KEY=${SECRET_KEY}
+
+RUN pip install psycopg2[binary]
+
+COPY ./bin/ ./bin/
+COPY ./backend/requirements.txt ./backend/
+
+RUN pip install -r ./backend/requirements.txt
+
+COPY ./backend ./backend
+
+COPY --from=frontend /frontend/dist ./frontend/dist
+
+EXPOSE 5000
+
+CMD [ "bash", "./bin/start.sh" ]
