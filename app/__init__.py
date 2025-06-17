@@ -1,4 +1,3 @@
-app = Flask(__name__, static_folder='../react-app/build', static_url_path='/')
 from flask import Flask, request, redirect
 from dotenv import load_dotenv
 import requests
