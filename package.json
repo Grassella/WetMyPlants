@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "requests": "^0.3.0",
-    "build": "CI=false && react-scripts build && cp -R ../app/static/* build/static"
-  }
-}
