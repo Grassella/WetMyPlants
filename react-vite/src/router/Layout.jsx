@@ -8,18 +8,19 @@ import Navigation from "../components/Navigation/Navigation";
 export default function Layout() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedPlant, setSelectedPlant] = useState(null);
+
   useEffect(() => {
     dispatch(thunkAuthenticate()).then(() => setIsLoaded(true));
   }, [dispatch]);
 
   return (
-    
-    <>
-      <ModalProvider>
-        <Navigation />
-        {isLoaded && <Outlet />}
-        <Modal />
-      </ModalProvider>
-    </>
+    <ModalProvider>
+      <Navigation />
+      {isLoaded && (
+        <Outlet context={{ selectedPlant, setSelectedPlant }} />
+      )}
+      <Modal />
+    </ModalProvider>
   );
 }

@@ -26,7 +26,7 @@ function Navigation() {
           <li><NavLink to="/plants">Plants</NavLink></li>
           {user && (
                         <>
-                            <li><NavLink to="/myplants">My Plants</NavLink></li>
+                            <li><NavLink to="/rooms">Rooms</NavLink></li>
                         </>
                     )}
           <li>

@@ -1,0 +1,79 @@
+.plant-page {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #3e3e3e;
+}
+
+.plant-page h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #356859; /* dark green accent */
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #b5caa0;
+}
+
+button {
+  background-color: #79b473; /* pastel green */
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #67a363;
+}
+
+select {
+  margin-left: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.plant-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.plant-card {
+  background-color: #ffffff;
+  border: 1px solid #cbe3bf;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(121, 180, 115, 0.1);
+  text-align: center;
+}
+
+.plant-card img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  margin: 0.5rem 0;
+  border-radius: 12px;
+}
+
+.care-info {
+  margin-top: 0.75rem;
+  text-align: left;
+  background-color: #f0f8ef;
+  border: 1px solid #d2e6d2;
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.care-info p {
+  margin: 0.3rem 0;
+}

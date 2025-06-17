@@ -2,6 +2,9 @@
 body {
     background:#D1B3A8;;
     background-image: linear-gradient(to right, rgba(255,255,255, 0.68) 0 100%), url("https://imgcdn.stablediffusionweb.com/2025/4/15/eb189339-6064-4ae8-a495-dfcd02479dd6.jpg");
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 background-image {

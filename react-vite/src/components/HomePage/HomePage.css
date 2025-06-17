@@ -1,0 +1,55 @@
+.simple-homepage {
+    display: flex;
+    height: 100vh;
+    font-family: 'Georgia', serif;
+    color: #111;
+  }
+  
+  .left-image {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .left-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .right-text {
+    flex: 1;
+    background-color: #B3816E;
+    color: white;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .category {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  
+  .right-text h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.7rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    margin-bottom: 2rem;
+  }
+  
+  .byline {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  

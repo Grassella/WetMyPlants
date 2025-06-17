@@ -5,6 +5,7 @@
 }
 
 .plant-navbar {
+  background-color: #FFF1C3;
   font-family: "Bagel";
   display: flex;
   justify-content: space-between;
@@ -21,6 +22,8 @@
 }
 
 .nav-links {
+  font-family: 'Bagel Fat One';
+  font-size: 1.9rem;
   display: flex;
   justify-content: space-evenly;
   flex: 1;
@@ -28,12 +31,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: 20%;
+  padding-left: 70%;
   cursor: pointer;
   }
 
   .nav-links a {
-  color: white;
+  color: #5C7250;
 
   text-decoration: none;
   font-weight: 500;

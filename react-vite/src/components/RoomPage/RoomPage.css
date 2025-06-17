@@ -1,0 +1,70 @@
+.room-page {
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    color: #3e3e3e;
+  }
+  
+  .rooms-list {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .room-card {
+    background-color: #82A272;
+    border: 1px solid #cbe3bf;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(121, 180, 115, 0.1);
+  }
+  
+  .plant-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .plant-card {
+    background-color: #DDFFC2;
+    border: 1px solid #d7e5cc;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 180px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  }
+  
+  .plant-card img {
+    width: 100%;
+    max-width: 100px;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+  }
+  
+  button {
+    background-color: #79b473;
+    border: none;
+    padding: 0.4rem 0.7rem;
+    margin: 0.25rem;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #67a363;
+  }
+  
+  .care-info {
+    margin-top: 0.75rem;
+    background-color: #f0f8ef;
+    border: 1px solid #d2e6d2;
+    border-radius: 10px;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  
+  h3 {
+    color: #F1C582;
+  }
