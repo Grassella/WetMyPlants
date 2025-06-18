@@ -14,3 +14,4 @@ class Room(db.Model):
             "name": self.name,
             "plants": [plant.to_dict() for plant in self.plants]
         }
+ 
