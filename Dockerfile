@@ -44,6 +44,6 @@ COPY ./backend ./backend
 
 COPY --from=frontend /frontend/dist ./frontend/dist
 
-EXPOSE 5000
+EXPOSE 8000
 
 CMD [ "bash", "./bin/start.sh" ]
