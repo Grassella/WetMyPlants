@@ -27,8 +27,7 @@ ENV FLASK_ENV=${FLASK_ENV}
 ARG SCHEMA=graciela_cap
 ENV SCHEMA=${SCHEMA}
 
-ARG DATABASE_URL=postgresql://aa_projs_user:yhTY188pcl5AiccdCyzPUwRwwp1n3d9s@dpg-d18c3cruibrs738eidu0-a/aa_projs?options=-csearch_path%3Dgraciela_cap
-
+ARG DATABASE_URL=postgresql://aa_projs_user:yhTY188pcl5AiccdCyzPUwRwwp1n3d9s@dpg-d18c3cruibrs738eidu0-a/aa_projs
 ENV DATABASE_URL=${DATABASE_URL}
 
 ARG SECRET_KEY=banana
