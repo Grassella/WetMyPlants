@@ -24,7 +24,7 @@ ENV SQLALCHEMY_ECHO=True
 ARG FLASK_ENV=production
 ENV FLASK_ENV=${FLASK_ENV}
 
-ARG SCHEMA=graciela_cap
+ARG SCHEMA=cap_proj
 ENV SCHEMA=${SCHEMA}
 
 ARG DATABASE_URL=postgresql://aa_projs_user:yhTY188pcl5AiccdCyzPUwRwwp1n3d9s@dpg-d18c3cruibrs738eidu0-a.oregon-postgres.render.com/aa_projs
