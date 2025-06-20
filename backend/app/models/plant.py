@@ -6,7 +6,7 @@ from datetime import datetime
 class Plant(db.Model):
     __tablename__ = 'plant'
 
-    id = db.Column(db.Integer, primary_key=True)  # <-- THIS is required
+    id = db.Column(db.Integer, primary_key=True) 
     room_id = db.Column(db.Integer, db.ForeignKey('rooms.id'), nullable=False)
     api_id = db.Column(db.Integer)
     common_name = db.Column(db.String)
