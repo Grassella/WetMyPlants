@@ -10,7 +10,7 @@ class Plant(db.Model):
         __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True) 
-    room_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('rooms.id'), nullable=False))
+    room_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('rooms.id')), nullable=False)
     api_id = db.Column(db.Integer)
     common_name = db.Column(db.String)
     image_url = db.Column(db.String)

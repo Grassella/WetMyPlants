@@ -17,7 +17,7 @@ FROM --platform=amd64 python:3.9
 
 WORKDIR /var/www
 
-ENV FLASK_APP=app
+ENV FLASK_APP=backend:app
 
 ENV SQLALCHEMY_ECHO=True
 
