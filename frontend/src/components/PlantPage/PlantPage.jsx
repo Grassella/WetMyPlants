@@ -124,7 +124,7 @@ function PlantPage() {
               />
             )}
             <button onClick={() => handleAddPlant(plant)}>Add to Room</button>
-            <button onClick={() => handleShowCareInfo(plant.id)}>Show Care Info</button>
+            {/* <button onClick={() => handleShowCareInfo(plant.id)}>Show Care Info</button>
 
             {careInfoMap[plant.id] && (
               <div className="care-info">
@@ -135,7 +135,7 @@ function PlantPage() {
                 <p><strong>Maintenance:</strong> {careInfoMap[plant.id].maintenance}</p>
                 <p><strong>Soil:</strong> {careInfoMap[plant.id].soil}</p>
               </div>
-            )}
+            )} */}
           </div>
         ))}
       </div>
